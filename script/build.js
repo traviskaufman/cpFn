@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 
 var es6ify = require('es6ify');
 var browserify = require('browserify');

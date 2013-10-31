@@ -1,4 +1,7 @@
-build:
+lint:
+	@./node_modules/.bin/jshint src/ spec/ script/
+
+build: lint
 	./script/build.js
 
 test: build

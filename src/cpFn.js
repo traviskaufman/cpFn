@@ -1,3 +1,6 @@
+// Can't use strict here, it causes problems with fat arrow functions :(
+/* jshint strict:false */
+
 var {
   Proxy, has, getOwnPropertyNames
 } = require('harmony-reflect');
