@@ -1,0 +1,21 @@
+{
+  "name": "cpFn",
+  "version": "0.0.1",
+  "description": "Elegant function replication using next-generation ECMAScript",
+  "keywords": [],
+  "author": "Travis Kaufman <travis.kaufman@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/traviskaufman/cpFn.git"
+  },
+  "dependencies": {
+    "harmony-reflect": "0.0.9"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "es6ify": "~0.4.3",
+    "chai": "~1.8.1",
+    "browserify": "~2.35.0"
+  },
+  "main": "index"
+}
