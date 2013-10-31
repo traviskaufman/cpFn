@@ -79,4 +79,27 @@ describe('cpFn', function() {
     assert.notProperty(copy, 'baz');
   });
 
+  it('allows values to be assigned to proxies', function() {
+    copy.biz = 1;
+    assert.propertyVal(copy, 'biz', 1);
+  });
+
+  it('allows defineProperty to be called on proxies', function() {
+    Object.defineProperty(copy, 'biz', {
+      value: 1,
+      configurable: true
+    });
+    assert.propertyVal(copy, 'biz', 1);
+  });
+
+  it('allows properties to be overriden only on the proxy', function() {
+    copy.foo = 33;
+    assert.propertyVal(copy, 'foo', 33);
+  });
+
+  it('keeps the old value if a property on orig fn gets updated', function() {
+    fn.foo = 5;
+    assert.strictEqual(copy.foo, 'bar');
+  });
+
 });
